@@ -6,6 +6,11 @@ const defaultRes=require('./middleware/defaults')
 const app=express();
 const defaultErr=require('./middleware/errorHandler')
 
+
+app.get('/',(req,res)=>{
+    res.status(200).send('received')
+})
+
 //middleware
 app.use(express.json())
 app.use('/api/v1/tasks',tasks)
